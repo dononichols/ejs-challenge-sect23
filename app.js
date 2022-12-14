@@ -16,10 +16,24 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 
 
-// create routes
+// CREATE ROUTES ======
+
+// send to home route
 app.get("/", function(req, res){
   res.render("home", {startingContent: homeStartingContent});
 });
+
+// send to about route
+app.get("/about", function(req, res){
+  res.render("about", {aboutContent: aboutContent});
+});
+
+// send to contact route
+app.get("/contact", function(req, res){
+  res.render("contact", {contactContent: contactContent});
+});
+
+// ========
 
 
 
